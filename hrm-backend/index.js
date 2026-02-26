@@ -11,7 +11,10 @@ const app = express();
 /* -------- Middlewares -------- */
 app.use(
   cors({
-    origin: "*", // For public access (change to specific domain for security)
+    origin: [
+      "http://localhost:5173",
+      "https://hr-management-system-j91g.vercel.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   })

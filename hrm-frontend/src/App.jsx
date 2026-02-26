@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SidebarLayout from "./layout/SidebarLayout";
 
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 import Employees from "./pages/Employee";
 import Attendance from "./pages/Attendence";
 

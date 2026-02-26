@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:production": "NODE_ENV=production node index.js",
+    "start:staging": "NODE_ENV=staging node index.js",
+    "start:dev": "brew services start mongodb-community && NODE_ENV=development nodemon index.js",
+    "gendoc": "node ./swagger.js",
+    "lint:fix": "knip && prettier --write . && eslint . --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.772.0",
+    "@sendgrid/mail": "^8.1.4",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.0",
+    "multer": "^1.4.5-lts.2",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.9",
+    "openai": "^5.2.0",
+    "stripe": "^17.7.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "twilio": "^5.5.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "knip": "^5.46.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}

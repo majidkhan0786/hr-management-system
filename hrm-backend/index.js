@@ -11,7 +11,10 @@ const app = express();
 /* -------- Middlewares -------- */
 app.use(
   cors({
-    origin: "*", // For public access (change to specific domain for security)
+    origin: [
+      "http://localhost:5173",
+      "https://hr-management-system-2-m3aj.onrender.com"
+    ], // For public access (change to specific domain for security)
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   })

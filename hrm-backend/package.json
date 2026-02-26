@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:production": "NODE_ENV=production node index.js",
-    "start:staging": "NODE_ENV=staging node index.js",
-    "start:dev": "brew services start mongodb-community && NODE_ENV=development nodemon index.js",
+  "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "echo 'No build step required'",
     "gendoc": "node ./swagger.js",
     "lint:fix": "knip && prettier --write . && eslint . --fix"
   },
